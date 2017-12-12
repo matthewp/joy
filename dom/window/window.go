@@ -2012,3 +2012,10 @@ func (*Window) IndexedDB() (indexedDB *IDBFactory) {
 	macro.Rewrite("$_.indexedDB")
 	return indexedDB
 }
+
+// CustomElements prop
+// js:"customElements"
+func (*Window) CustomElements() (customElements *CustomElementRegistry) {
+	macro.Rewrite("$_.customElements")
+	return customElements
+}

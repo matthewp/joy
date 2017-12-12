@@ -5,10 +5,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"runtime"
-	"time"
 
-	"github.com/apex/log"
 	"github.com/matthewmueller/joy/internal/prompt"
 	"github.com/matthewmueller/joy/internal/stats"
 	"github.com/matthewmueller/store"
@@ -28,17 +25,14 @@ import (
 // Run the CLI
 func Run(ctx context.Context, ver string) (err error) {
 	// setup stats
-	defer func() {
-		if err := stats.Client.MaybeFlush(100, 1*time.Minute); err != nil {
-			log.WithError(err).Errorf("error flushing")
-		}
-	}()
 
+	/*
 	stats.Client.Set(map[string]interface{}{
 		"os":      runtime.GOOS,
 		"arch":    runtime.GOARCH,
 		"version": ver,
 	})
+	*/
 
 	cmd := kingpin.New("joy", "Joy – A Delightful Go to Javascript Compiler")
 	cmd.Version(ver)
