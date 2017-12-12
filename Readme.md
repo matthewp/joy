@@ -96,6 +96,8 @@ So happy to hear you're interested in contributing! Here's a quick rundown of ho
 
 2. `go get -u -v github.com/matthewmueller/joy/...` to install the compiler from source
 
+4. Set the `GOLLY_CHROME_PATH` to the path of your Chrome executable, ex: `export GOLLY_CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"`
+
 3. `go test -v` to run all the tests
 
 **Links and tips:**
